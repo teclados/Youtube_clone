@@ -1,0 +1,243 @@
+/* sidebar 한줄로 축소 */
+@custom-media --size1 (max-width: 1327px);
+/* topbar의 검색창 줄어들기 시작함 */
+@custom-media --size2 (max-width: 1180px);
+/* 4개->3개 */
+@custom-media --size3 (max-width: 1143px);
+/* 3개->2개 */
+@custom-media --size4 (max-width: 885px);
+/* sideber 없어짐 */
+@custom-media --size5 (max-width: 810px);
+/* topbar의 검색창 없어짐 */
+@custom-media --size6 (max-width: 652px);
+/* 2개->1개 */
+@custom-media --size7 (max-width: 511px);
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    height: 56px;
+    position: fixed;
+    width: 100vw;
+    display: grid;
+    padding: 0 16px;
+    grid-template-columns: 56px 130px calc(100vw - 443px) 225px;
+    place-items: center;
+    background-color: white;
+
+}
+
+i {
+    font-size: 1.2rem;
+    color: rgb(96,96,96);
+}
+
+.sidebar_icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+}
+
+.youtube_logo {
+    width: 130px;
+}
+
+.yt_logo {
+    height: 24px;
+}
+
+
+/* -------------------------------*/
+
+.searchbox {
+    width: 641px;
+    height: 30px;
+    display: grid;
+    grid-template-columns: 575px 65px;
+}
+
+
+.searchcontext {
+    width: 575px;
+    height: 30px;
+    border-style: solid;
+    border-right-style: none;
+    border-width: thin;
+    border-radius: 2px;
+    border-color: rgb(204, 204, 204);
+}
+
+input {
+    border: none;
+    height: 24px;
+    width: 531px;
+    font-size: 15px;
+}
+
+.searchbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(248,248,248);
+    border-style: solid;
+    border-width: thin;
+    border-radius: 2px;
+    border-color: rgb(204, 204, 204);
+}
+
+#search_icon {
+    font-size: 20px;
+}
+
+
+/* ---------------------------- */
+
+.four-menu-button {
+    justify-self: end;
+    margin-right: 16px;
+}
+
+.four-menu-button i {
+    margin: 8px;
+}
+
+#me_icon {
+    font-size: 28px;
+    margin: 1px 6px;
+}
+
+/* ---------------------------- */
+main {
+    display: grid;
+    grid-template-columns: 240px calc(100vw - 240px);
+    width: 100vw;
+    padding-top: 56px;
+}
+
+.sidebar {
+    height: 100vh;
+    padding: 12px 0;
+}
+
+.sidemenu {
+    padding: 0 24px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar i {
+    margin-right: 24px;
+}
+
+.sidebar span {
+    font-size: 14px;
+}
+
+.sidebar #home_menu {
+    background-color: rgb(229,229,229);
+}
+
+#home_icon {
+    color: red;
+}
+
+.sidebar hr {
+    color: rgb(249, 249, 249);
+    border-style: solid;
+    border-width: 1px;
+    background-color: rgb(249,249,249);
+}
+
+.sub_word {
+    padding: 8px 24px;
+    height: 34px;
+    font-size: 14px;
+    color:rgb(96,96,96);
+}
+
+/* ---------------------------- */
+
+.content {
+    background-color: rgb(249,249,249);
+}
+
+.wrap {
+    margin: 0 24px;
+}
+
+.my_video {
+    margin-top: 36px;
+}
+
+.my_video span {
+    font-size: 20px;
+}
+
+.video-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.flexbox_video {
+    margin: 0 8px 40px 8px;
+}
+
+.videothumb img {
+    width: 100%;
+}
+
+.channel_image {
+    margin-top: 2px;
+    margin-right: 8px;
+}
+
+.channel_image img {
+    width: 43px;
+}
+
+.videocontent {
+    margin-top: 8px;
+    display: flex;
+    font-size: 15px;
+}
+
+.videodetail {
+    margin-top: 4px;
+    color: rgb(96,96,96);
+}
+
+@media(--size3){
+    .video-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    
+    }
+}
+
+@media(--size4){
+    .video-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    
+    }
+}
+
+@media(--size7){
+    .video-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    
+    }
+}
