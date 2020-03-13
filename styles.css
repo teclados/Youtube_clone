@@ -125,6 +125,10 @@ main {
     padding: 12px 0;
 }
 
+.sidebar2 {
+    display: none;
+}
+
 .sidemenu {
     padding: 0 24px;
     height: 40px;
@@ -215,6 +219,15 @@ main {
     color: rgb(96,96,96);
 }
 
+@media(--size1){
+    main {
+        grid-template-columns: 72px calc(100vw - 72px);
+    }
+    .sidebar .media_change1 {
+        display: none;
+    }
+}
+
 @media(--size3){
     .video-container {
         width: 100%;
@@ -230,6 +243,15 @@ main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     
+    }
+}
+
+@media(--size5){
+    main {
+        display: block;
+    }
+    .sidebar {
+        display: none;
     }
 }
 
